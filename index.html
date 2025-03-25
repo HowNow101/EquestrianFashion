@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Equestrian Fashion - Ride in Style</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+
+        body {
+            background: #f5f3f1;
+        }
+
+        .hero {
+            position: relative;
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('images/equestrian-banner1.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 4rem;
+        }
+
+        .hero h1 {
+            color: #fff;
+            font-size: 3.8rem;
+            text-align: center;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            letter-spacing: 1.5px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .content {
+            padding: 0 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .description {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 0 20px;
+            color: #3d2b1e;
+        }
+
+        .description p {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 2.5rem;
+            width: 420px;
+            min-height: 420px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #e0d7d1;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card:nth-child(1)::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('images/equestrian-banner2.jpg') center/cover;
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .card:nth-child(2)::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('images/equestrian-banner3.jpg') center/cover;
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .card h2 {
+            color: #6b4f3a;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .card p {
+            color: #5a5049;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 280px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 40px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            font-size: 0.95rem;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: #8b5d33;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #6b4f3a;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 4rem 20px;
+            background: #3d2b1e;
+            color: #fff;
+            margin-top: 4rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2.4rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .disclaimer {
+            padding: 2rem 20px;
+            background: #e9e5e2;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #5a5049;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+            
+            .card {
+                width: 90%;
+                padding: 2rem;
+                min-height: 380px;
+            }
+
+            .cards-container {
+                gap: 2rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="hero">
+        <h1>Elevate Your Equestrian Style</h1>
+    </section>
+
+    <div class="content">
+        <section class="description">
+            <p>Discover the perfect fusion of luxury and functionality with our curated equestrian collection. From competition-ready apparel to bespoke leather saddles, experience premium craftsmanship designed for discerning riders.</p>
+        </section>
+
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-content">
+                    <h2>Designer Collections</h2>
+                    <p>Explore our exclusive range of competition jackets, riding boots, and elegant accessories for the modern equestrian.</p>
+                    <a href="https://royalequestriancollection.com?sca_ref=8427243.LTw1R6hlDb" class="btn btn-primary" target="_blank">Shop Collection</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <h2>Premium Tack</h2>
+                    <p>Discover handcrafted saddles, bridles, and riding equipment made with traditional techniques and modern innovation.</p>
+                    <a href="https://shareasale.com/r.cfm?b=38383&u=4269258&m=8199&urllink=&afftrack=" class="btn btn-primary" target="_blank">Explore Saddles</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta-section">
+        <h2>Join the Equestrian Elite</h2>
+        <p>Limited edition collections - Secure your pieces before they gallop away!</p>
+        <p style="margin-top: 1.5rem; font-size: 1.1rem;">🏇 Free Shipping on Selected Orders 🏇</p>
+    </section>
+
+    <div class="disclaimer">
+        <p>Disclosure: We may earn a commission from purchases made through our links. This helps support our content curation while maintaining our editorial integrity. Prices are exactly the same for you whether you purchase through our links or not.</p>
+    </div>
+</body>
+</html>
