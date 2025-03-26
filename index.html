@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Equestrian Collection</title>
+    <title>Royal Equestrian Fashion - Ride in Style</title>
     <style>
         * {
             margin: 0;
@@ -16,8 +16,8 @@
             background: #f5f3f1;
         }
 
-        /* HERO SECTION */
         .hero {
+            position: relative;
             height: 70vh;
             background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('images/equestrian-banner1.jpg') center/cover;
             display: flex;
@@ -29,32 +29,35 @@
         .hero h1 {
             color: #fff;
             font-size: 3.8rem;
+            text-align: center;
             text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            letter-spacing: 1.5px;
             font-family: 'Playfair Display', serif;
         }
 
-        /* MAIN CONTENT CONTAINER */
         .content {
+            padding: 0 15px;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
         }
 
-        /* DESCRIPTION SECTION */
         .description {
             text-align: center;
             margin-bottom: 4rem;
+            padding: 0 20px;
             color: #3d2b1e;
         }
 
         .description p {
             font-size: 1.25rem;
             line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
             max-width: 800px;
-            margin: 0 auto;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        /* PRODUCT CARDS */
         .cards-container {
             display: flex;
             justify-content: center;
@@ -65,94 +68,74 @@
 
         .card {
             background: #fff;
-            width: 420px;
-            padding: 2.5rem;
             border-radius: 15px;
+            padding: 2.5rem;
+            width: 420px;
+            min-height: 420px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
             position: relative;
             overflow: hidden;
             border: 1px solid #e0d7d1;
-            transition: transform 0.3s ease;
         }
 
         .card:hover {
             transform: translateY(-8px);
         }
 
-        .card::before {
+        .card:nth-child(1)::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
+            background: url('images/fashion-bg.jpg') center/cover;
             opacity: 0.3;
             z-index: 0;
         }
 
-        .card:nth-child(1)::before {
-            background: url('equestrian-banner2') center/cover;
-        }
-
         .card:nth-child(2)::before {
-            background: url('equestrian-banner3') center/cover;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('images/saddle-bg.jpg') center/cover;
+            opacity: 0.3;
+            z-index: 0;
         }
 
         .card-content {
             position: relative;
             z-index: 1;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
         }
 
         .card h2 {
             color: #6b4f3a;
+            margin-bottom: 1.5rem;
             font-size: 2rem;
-            margin-bottom: 1rem;
             font-family: 'Playfair Display', serif;
         }
 
         .card p {
             color: #5a5049;
             margin-bottom: 2rem;
+            font-size: 1.1rem;
             line-height: 1.6;
+            max-width: 280px;
         }
 
-        /* EDUCATION CARD */
-        .course-card {
-            background: #f8f6f3;
-            border-radius: 15px;
-            padding: 2.5rem;
-            max-width: 800px;
-            margin: 3rem auto;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            border: 2px solid #6b4f3a;
-        }
-
-        .course-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('images/equestrian-banner4') center/cover;
-            opacity: 0.3;
-        }
-
-        .course-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .course-card h3 {
-            color: #3d2b1e;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        /* BUTTONS */
         .btn {
             display: inline-block;
             padding: 14px 40px;
@@ -161,6 +144,9 @@
             font-weight: bold;
             transition: all 0.3s ease;
             text-transform: uppercase;
+            letter-spacing: 1.2px;
+            font-size: 0.95rem;
+            border: 2px solid transparent;
         }
 
         .btn-primary {
@@ -172,17 +158,6 @@
             background: #6b4f3a;
         }
 
-        .btn-education {
-            background: #2d6a4f;
-            color: #fff !important;
-            border: 2px solid #245d46;
-        }
-
-        .btn-education:hover {
-            background: #245d46;
-        }
-
-        /* CTA SECTION */
         .cta-section {
             text-align: center;
             padding: 4rem 20px;
@@ -191,13 +166,19 @@
             margin-top: 4rem;
         }
 
-        /* DISCLAIMER */
+        .cta-section h2 {
+            font-size: 2.4rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
         .disclaimer {
             padding: 2rem 20px;
             background: #e9e5e2;
             text-align: center;
             font-size: 0.85rem;
             color: #5a5049;
+            line-height: 1.5;
         }
 
         @media (max-width: 768px) {
@@ -208,54 +189,46 @@
             .card {
                 width: 90%;
                 padding: 2rem;
+                min-height: 380px;
             }
 
-            .course-card {
-                padding: 2rem;
+            .cards-container {
+                gap: 2rem;
             }
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- HERO SECTION -->
     <section class="hero">
-        <h1>Elevate Your Equestrian Journey</h1>
+        <h1>Elevate Your Equestrian Style</h1>
     </section>
 
-    <!-- MAIN CONTENT -->
     <div class="content">
-        <!-- DESCRIPTION -->
         <section class="description">
-            <p>Discover premium equestrian products and education for discerning riders. Experience the perfect blend of luxury craftsmanship and expert training.</p>
+            <p>Discover the perfect fusion of luxury and functionality with our curated equestrian collection. From competition-ready apparel to bespoke leather saddles, experience premium craftsmanship designed for discerning riders.</p>
         </section>
 
-        <!-- PRODUCT CARDS -->
         <div class="cards-container">
             <div class="card">
                 <div class="card-content">
-                    <h2>Designer Apparel</h2>
-                    <p>Premium riding wear combining style and performance</p>
-                    <a href="https://royalequestriancollection.com?sca_ref=8427243.LTw1R6hlDb" 
-                       class="btn btn-primary" 
-                       target="_blank">
-                        Shop Now
-                    </a>
+                    <h2>Designer Collections</h2>
+                    <p>Explore our exclusive range of competition jackets, riding boots, and elegant accessories for the modern equestrian.</p>
+                    <a href="https://royalequestriancollection.com?sca_ref=8427243.LTw1R6hlDb" class="btn btn-primary" target="_blank">Shop Collection</a>
                 </div>
             </div>
 
             <div class="card">
                 <div class="card-content">
                     <h2>Premium Tack</h2>
-                    <p>Handcrafted saddles and riding equipment</p>
-                    <a href="https://shareasale.com/r.cfm?b=38383&u=4269258&m=8199&urllink=&afftrack=" 
-                       class="btn btn-primary" 
-                       target="_blank">
-                        Explore Gear
-                    </a>
+                    <p>Discover handcrafted saddles, bridles, and riding equipment made with traditional techniques and modern innovation.</p>
+                    <a href="https://shareasale.com/r.cfm?b=38383&u=4269258&m=8199&urllink=&afftrack=" class="btn btn-primary" target="_blank">Explore Saddles</a>
                 </div>
             </div>
         </div>
+    </div>
+
+  
 <style>
 /* ... (keep other styles unchanged) ... */
 
