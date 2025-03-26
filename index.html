@@ -91,11 +91,11 @@
         }
 
         .card:nth-child(1)::before {
-            background: url('images/fashion-bg.jpg') center/cover;
+            background: url('equestrian-banner2') center/cover;
         }
 
         .card:nth-child(2)::before {
-            background: url('images/saddle-bg.jpg') center/cover;
+            background: url('equestrian-banner3') center/cover;
         }
 
         .card-content {
@@ -137,7 +137,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('images/education-bg.jpg') center/cover;
+            background: url('images/equestrian-banner4') center/cover;
             opacity: 0.1;
         }
 
@@ -256,20 +256,46 @@
                 </div>
             </div>
         </div>
+<style>
+/* ... (keep other styles unchanged) ... */
 
-        <!-- EDUCATION CARD -->
-        <div class="course-card">
-            <div class="course-content">
-                <h3>Free Equestrian Certification</h3>
-                <p>Master horse care & psychology with Alison's accredited course</p>
-                <a href="https://alison.com/courses?query=horse+care&utm_source=alison_user&utm_medium=affiliates&utm_campaign=39872393" 
-                   class="btn btn-education" 
-                   target="_blank">
-                    Enroll Free
-                </a>
-            </div>
-        </div>
+/* EDUCATION CARD ADJUSTMENTS */
+.course-card p {
+    color: #5a5049;
+    margin-bottom: 2.5rem; /* Increased from 1.5rem */
+    line-height: 1.7; /* Added for better text spacing */
+    font-size: 1.1rem;
+    padding: 0 1rem; /* Prevent text edge crowding */
+}
+
+.btn-education {
+    margin-top: 1rem; /* Added top margin */
+    padding: 16px 50px; /* Increased button size */
+    letter-spacing: 1px; /* Better text spacing */
+}
+
+/* Optional: Add transition for hover effect */
+.btn-education {
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.btn-education:hover {
+    transform: scale(1.05); /* Subtle hover animation */
+}
+</style>
+
+<!-- EDUCATION CARD SECTION -->
+<div class="course-card">
+    <div class="course-content">
+        <h3>Free Equestrian Certification</h3>
+        <p>Master horse care & psychology with Alison's accredited course</p>
+        <a href="https://alison.com/courses?query=horse+care&utm_source=alison_user&utm_medium=affiliates&utm_campaign=39872393" 
+           class="btn btn-education" 
+           target="_blank">
+            Enroll Free
+        </a>
     </div>
+</div>
 
     <!-- FINAL CTA -->
     <section class="cta-section">
